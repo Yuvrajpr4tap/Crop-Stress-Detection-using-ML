@@ -1,0 +1,116 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "field_001",
+      "properties": {
+        "name": "North Field",
+        "crop": "corn",
+        "area_ha": 42.5,
+        "elevation_m": 245
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -93.5,
+              40.5
+            ],
+            [
+              -93.48,
+              40.5
+            ],
+            [
+              -93.48,
+              40.52
+            ],
+            [
+              -93.5,
+              40.52
+            ],
+            [
+              -93.5,
+              40.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "field_002",
+      "properties": {
+        "name": "South Field",
+        "crop": "soybeans",
+        "area_ha": 38.2,
+        "elevation_m": 230
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -93.52,
+              40.45
+            ],
+            [
+              -93.5,
+              40.45
+            ],
+            [
+              -93.5,
+              40.47
+            ],
+            [
+              -93.52,
+              40.47
+            ],
+            [
+              -93.52,
+              40.45
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "field_003",
+      "properties": {
+        "name": "East Field",
+        "crop": "corn",
+        "area_ha": 35.8,
+        "elevation_m": 250
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -93.47,
+              40.48
+            ],
+            [
+              -93.45,
+              40.48
+            ],
+            [
+              -93.45,
+              40.5
+            ],
+            [
+              -93.47,
+              40.5
+            ],
+            [
+              -93.47,
+              40.48
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

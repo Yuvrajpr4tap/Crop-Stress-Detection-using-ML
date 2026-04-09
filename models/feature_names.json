@@ -1,0 +1,22 @@
+[
+  "ndvi",
+  "soil_moisture_vol",
+  "soil_temp_c",
+  "soil_ec_ds_m",
+  "ndvi_rolling_mean_7d",
+  "ndvi_rolling_std_7d",
+  "ndvi_rolling_mean_14d",
+  "ndvi_rolling_std_14d",
+  "lag_1_ndvi",
+  "lag_3_ndvi",
+  "lag_7_ndvi",
+  "ndvi_change_pct",
+  "ndvi_change_from_7d_ago",
+  "lag_1_soil_moisture",
+  "lag_3_soil_moisture",
+  "lag_7_soil_moisture",
+  "soil_moisture_deficit",
+  "rainfall_proxy",
+  "extreme_heat_proxy",
+  "moisture_temp_interaction"
+]
