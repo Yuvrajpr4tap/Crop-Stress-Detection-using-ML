@@ -225,37 +225,37 @@ docker run -p 8501:8501 crop-stress-detection:dashboard-0.1.0
 
 ## Key Features
 
-### ✅ Data Pipeline
+### Data Pipeline
 - Synthetic dataset generator (3 fields, 7 months of data)
 - NDVI preprocessing (quality filtering, temporal alignment)
 - Soil sensor aggregation & imputation
 - Multimodal data alignment with forward-fill
 
-### ✅ Feature Engineering
+### Feature Engineering
 - Rolling statistics (7d, 14d windows)
 - Lag features (t-1, t-3, t-7 days)
 - Derived features (NDVI change %, moisture deficit)
 - Interaction terms (moisture × temperature)
 
-### ✅ Modeling
+### Modeling
 - **Algorithm:** LightGBM with class weighting
 - **Validation:** Field-stratified + temporal cross-validation
 - **Training Time:** <2 min on CPU
 - **Inference:** <50ms per prediction
 
-### ✅ Explainability
+### Explainability
 - SHAP TreeExplainer for local explanations
 - Top-3 feature contributions per prediction
 - Natural language explanation templates
 - Global feature importance plots
 
-### ✅ API & Deployment
+### API & Deployment
 - FastAPI with input validation
 - Error handling & health checks
 - Canned example for CI testing
 - Docker multi-stage build
 
-### ✅ Visualization
+### Visualization
 - Real-time dashboard (Streamlit)
 - Interactive NDVI/sensor plots (Plotly)
 - Alert timeline with recommendations
@@ -281,53 +281,3 @@ docker run -p 8501:8501 crop-stress-detection:dashboard-0.1.0
 - **Sensors:** Synthetic soil measurements (moisture, temp, EC)
 - **Labels:** Synthetic stress events (NDVI drop > 0.10 over 2 weeks)
 
-### Limitations
-- Synthetic data does not reflect real agricultural conditions
-- Simple stress labeling rule (NDVI drop threshold)
-- 7-month growing season only
-- No weather data, pest/disease information, or management practices
-- Temporal resolution: 8-day NDVI, 6-hourly sensors
-
-### Production Considerations
-1. **Real Data:** Integrate with Sentinel-2, Landsat, or Planet APIs
-2. **Retraining:** Monthly or bi-monthly with new season data
-3. **Label Quality:** Collaborate with agronomists for ground truth
-4. **Model Drift:** Monitor false alert rate; retrain if >10% degradation
-5. **Scaling:** Deploy on cloud (AWS/GCP) with containerized services
-6. **Monitoring:** Log predictions, alerts, and user feedback
-
-## Next Steps
-
-1. **Expand Data:** Integrate live satellite feeds and real sensor networks
-2. **Advanced Features:** Add weather data, crop calendar, NDVI indices (GNDVI, EVI)
-3. **Ensemble Models:** Combine LightGBM with XGBoost or neural networks
-4. **Probabilistic Forecasting:** Time series models (LSTM/Transformer) for 7-day stress outlook
-5. **Business Integration:** Alerts to farmers via SMS/mobile app, irrigation recommendations
-6. **Regulatory Compliance:** Data governance, model validation for agricultural certifications
-
-## Interview Talking Points
-
-See `interview_talking_points.md` for detailed Q&A on:
-- Problem framing & business impact
-- Data challenges & labeling strategy
-- Model selection & explainability
-- Scaling & operational considerations
-- Measured farmer outcomes
-
-## Demo Recording
-
-See `demo_script.md` for a 2-minute demo script covering:
-- Map view with stress alerts
-- Field detail with NDVI/sensor plots
-- Live API prediction with SHAP explanation
-- Production considerations
-
-## Authors & License
-
-Built as a production-ready prototype for interview & portfolio demonstrations.
-
-**Stack:** Python 3.10+ | LightGBM | SHAP | FastAPI | Streamlit | Docker
-
----
-
-**Questions?** See `design_doc.md` for architecture details or `interview_talking_points.md` for common technical questions.
