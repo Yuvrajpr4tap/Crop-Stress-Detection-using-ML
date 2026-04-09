@@ -85,8 +85,10 @@ venv.bak/
 # Local testing
 /test_results/
 /*.pkl
-/models/*.pkl
+# Exclude large model files except production-trained models
 /models/*.h5
+!models/*.pkl
+!models/*.json
 !/models/.gitkeep
 
 # Docker
